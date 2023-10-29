@@ -1,0 +1,16 @@
+/*Footer*/
+.pie-de-pagina {
+  height: 110px;
+  background-color: #333; /* Cambia el color de fondo según tus preferencias */
+  color: white; /* Cambia el color del texto según tus preferencias */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.pie-de-pagina::before {
+  margin-right: 5px; /* Espacio entre el símbolo de copyright y el texto */
+  font-size: 20px; /* Tamaño del símbolo de copyright */
+}
