@@ -1,0 +1,111 @@
+
+<div class="container login">
+  <div class="registrarse">
+    <h2>Registrarse</h2>
+
+    <div *ngIf="pasoActual === 1">
+      <!-- Paso 1 -->
+      <div class="separator">
+        <div class="circle-lleno"><p>1</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>2</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>3</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>4</p></div>
+      </div>
+
+      <div class="inputs">
+        <div class="input450">
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" placeholder="Ingrese su correo">
+        </div>
+        <div class="input450">
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese una contraseña">
+        </div>
+        <div class="input450">
+          <label for="comfirmarContraseña">Confirmar Contraseña:</label>
+          <input type="password" id="comfirmarContraseña" name="comfirmarContraseña" placeholder="Confirma su contraseña">
+        </div>
+      </div>
+
+      <p>¿Ya tienes cuenta? <a routerLink="/inicioSesion">Haz click aquí</a></p>
+
+      <div class="buttons">
+        <button routerLink="" class="cancel-button" (click)="cancelar()">Cancelar</button>
+        <button class="login-button" (click)="siguientePaso()">Siguiente Paso</button>
+      </div>
+    </div>
+
+    <div *ngIf="pasoActual === 2">
+      <!-- Paso 2 -->
+      <div class="separator">
+        <div class="circle-lleno"><p>1</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>2</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>3</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>4</p></div>
+      </div>
+      <form>
+        <div class="multi-col">
+          <div class="input450">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre">
+
+            <label for="dni">Documento de Identidad:</label>
+            <input type="number" id="dni" name="dni" placeholder="Ingrese su DNI">
+
+            <label for="provincia">Provincia:</label>
+            <!-- Ejemplo de la plantilla para la lista de provincias -->
+            <select id="provincia" name="provincia" [(ngModel)]="selectedProvincia" (change)="filtrarDepartamentos()">
+              <option *ngFor="let provincia of provincias" [value]="provincia.codigo">{{ provincia.nombre }}</option>
+            </select>
+          </div>
+
+          <div class="input450">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su Apellido">
+
+            <label for="telefono">Telefono:</label>
+            <input type="number" id="telefono" name="telefono" placeholder="Ingrese su numero de telefono">
+
+            <label for="departamento">Departamento:</label>
+            <!-- Ejemplo de la plantilla para la lista de departamentos -->
+            <select id="departamento" name="departamento" [(ngModel)]="selectedDepartamento">
+              <option *ngFor="let departamento of departamentos" [value]="departamento.codigo">{{ departamento.nombre }}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="cancel-button" (click)="anteriorPaso()">Paso Anterior</button>
+          <button class="login-button" (click)="siguientePaso()">Siguiente Paso</button>
+        </div>
+      </form>
+
+    </div>
+
+    <div *ngIf="pasoActual === 3">
+      <!-- Paso 3 -->
+      <h2>Paso 3: Configuración de Perfil</h2>
+      <h1>gluglu3</h1>
+      <div class="buttons">
+        <button class="cancel-button" (click)="anteriorPaso()">Paso Anterior</button>
+        <button class="login-button" (click)="siguientePaso()">Siguiente Paso</button>
+      </div>
+    </div>
+
+    <div *ngIf="pasoActual === 4">
+      <!-- Paso 4 -->
+      <h2>Paso 4: Confirmación</h2>
+      <!-- Aquí van los campos del paso 4 -->
+      <div class="buttons">
+        <button class="cancel-button" (click)="anteriorPaso()">Paso Anterior</button>
+        <button class="login-button" (click)="guardar()">Guardar</button>
+      </div>
+    </div>
+    </div>
+  </div>
