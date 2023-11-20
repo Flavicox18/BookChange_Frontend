@@ -7,8 +7,8 @@
   padding: 10px 10px;
 
   .logo-nav{
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
   }
 
   .menu {
@@ -22,8 +22,8 @@
       padding: 15px 10px;
       text-decoration: none;
       color: #000;
-      font-size: 27px;
-      transition: color 0.3s;
+      font-size: 23px;
+      transition: 0.3s;
       cursor: pointer;
       border: 5px solid #d1d1d1;
 
@@ -36,7 +36,7 @@
 
   .login {
     button {
-      font-size: 20px;
+      font-size: 18px;
       background-color: #693CC7;
       color: #fff;
       border: 3px solid #000;
