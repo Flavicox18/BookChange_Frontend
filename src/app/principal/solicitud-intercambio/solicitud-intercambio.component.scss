@@ -1,0 +1,239 @@
+.container {
+
+  .ola {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .columna-izquierda {
+    flex: 3;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #EEEFFF !important;
+
+  }
+
+  .columna-medio{
+    flex: 4;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .columna-derecha {
+    flex: 3;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #EEEFFF !important;
+  }
+
+     .imagen-libro {
+      width: auto;
+      height: auto;
+      margin-bottom: 15px;
+      overflow: hidden;
+
+      img {
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+      }
+    }
+
+  .fila1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #8a8a8a;
+      padding: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    img{
+      width: 100px;
+      height: 100px;
+      align-items: center;
+    }
+  }
+
+  .circle {
+    width: 70px; /* Ajusta el tamaño del círculo */
+    height: 70px; /* Ajusta el tamaño del círculo*/
+    background-color: #333; /* Color de fondo del círculo */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .button {
+    background-color: #693CC7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+  }
+
+  .button:hover{
+    background-color: #6b35f8;
+    color: #ffffff;
+  }
+
+  .button:active{
+    background-color: #693CC7;
+    color: #ffffff;
+  }
+
+  .buttonend {
+    background-color: #693CC7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+    width: auto;
+    margin-left: 65%;
+  }
+
+  .buttonend:hover{
+    background-color: #6b35f8;
+    color: #ffffff;
+  }
+
+  .buttonend:active{
+    background-color: #693CC7;
+    color: #ffffff;
+  }
+
+  btn{
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    width: 100%;
+    margin-top: 10px; /* Ajusta según sea necesario */
+  }
+
+  .button1{
+    background-color: #000;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+    margin-left: 10px;
+  }
+
+  .button1:hover{
+    background-color: #101010;
+    color: #ffffff;
+  }
+
+  .button1:active{
+    background-color: #101010;
+    color: #ffffff;
+  }
+
+  .fila2 {
+    display: flex;
+    margin-left: 40px;
+
+    h1{
+      margin-bottom: 10px;
+    }
+
+    h3{
+      margin-top: 10px;
+      align-items: center;
+    }
+
+  }
+
+  campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    campo1{
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    campo2{
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="date"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical; /* Cambiar el tamaño verticalmente */
+    min-height: 80px;
+  }
+
+}
+

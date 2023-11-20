@@ -1,0 +1,142 @@
+.container {
+
+  .ola {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .columna-izquierda {
+    flex: 2;
+    width: 30%;
+    padding: 10px;
+    border: 2px solid #000;
+    background-color: #EEEFFF !important;
+  }
+
+  .columna-derecha {
+    flex: 8;
+    width: 70%;
+    padding: 10px;
+  }
+
+  .libro-container {
+    display: flex;
+    flex-direction: column;
+
+    .imagen-libro {
+      width: auto; /* Ajusta el tamaño según tus necesidades */
+      height: auto; /* Ajusta el tamaño según tus necesidades */
+      background-color: #ccc; /* Color de fondo del cuadrado de la imagen */
+      margin-bottom: 15px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .detalles-libro {
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .fila1 {
+    padding: 10px;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 0px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #8a8a8a;
+      padding: 5px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .circle {
+    width: 70px; /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 70px; /* Ajusta el tamaño del círculo según tus necesidades */
+    background-color: #333; /* Color de fondo del círculo */
+    border-radius: 50%; /* Hace que el elemento tenga forma de círculo */
+    margin-right: 10px; /* Ajusta el margen según tus necesidades */
+  }
+
+  .circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .button {
+    background-color: #693CC7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    display: flex;
+    transition: 0.3s ease;
+  }
+
+  .button:hover{
+    background-color: #6b35f8;
+    color: #ffffff;
+  }
+
+  .button:active{
+    background-color: #693CC7;
+    color: #ffffff;
+  }
+
+  .fila2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    h1{
+      margin-bottom: 10px;
+    }
+
+    h3{
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    button{
+      margin-left: 50%;
+    }
+  }
+
+  img-circulo{
+    width: auto; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Ajusta el tamaño según tus necesidades */
+    background-color: #ccc; /* Color de fondo del cuadrado de la imagen */
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}

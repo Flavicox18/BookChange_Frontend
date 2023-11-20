@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #d1d1d1;
+  color: #000;
+  padding: 5px 5px;
+
+  .logo-nav {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px; // Reducido el espacio entre elementos del menú
+
+    a {
+      display: flex;
+      align-items: center; // Centra verticalmente el texto dentro de los enlaces
+      padding: 8px 6px;
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      transition: color 0.3s;
+      cursor: pointer;
+      border: 5px solid transparent; // Evita que el borde afecte el tamaño total
+
+      &:hover {
+        border-top: 5px solid #693CC7;
+        color: #693CC7; // Cambia el color al pasar el mouse
+      }
+    }
+  }
+
+  .search-container {
+    margin-left: auto;
+    margin-top: 25px;
+
+    mat-form-field {
+      width: 300px; // Ajusta el ancho según tus necesidades
+      height: 70px;
+      margin-bottom: 0;
+
+    }
+
+    input {
+      font-size: 14px;
+    }
+  }
+}
