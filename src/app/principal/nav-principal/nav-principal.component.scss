@@ -35,17 +35,39 @@
 
   .search-container {
     margin-left: auto;
-    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
 
-    mat-form-field {
-      width: 300px; // Ajusta el ancho según tus necesidades
-      height: 70px;
-      margin-bottom: 0;
-
+    input{
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-top: 2px solid #000000;
+      border-left: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      border-right: 2px solid #ffffff;
+      border-radius: 15px 0px 0px 15px;
+      font-size: 15px;
+    }
+    button{
+      background-color: #ffffff;
+      padding: 8px 10px;
+      font-size: 15px;
+      font-weight: bold;
+      border-top: 2px solid #000000;
+      border-right: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      border-left: 2px solid #ffffff;
+      border-radius: 0px 15px 15px 0px;
+      margin-bottom: 10px;
+      transition: 0.3s ease;
+    }
+    button:hover{
+      background-color: #e8e8e8;
     }
 
-    input {
-      font-size: 14px;
+    button:active{
+      background-color: #ffffff;
     }
   }
 }
