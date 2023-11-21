@@ -90,8 +90,31 @@
 
     <div *ngIf="pasoActual === 3">
       <!-- Paso 3 -->
-      <h2>Paso 3: Configuración de Perfil</h2>
-      <h1>gluglu3</h1>
+      <div class="separator">
+        <div class="circle-lleno"><p>1</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>2</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>3</p></div>
+        <div class="line"></div>
+        <div class="circle"><p>4</p></div>
+      </div>
+      <form>
+        <div class="multi-col">
+          <div class="input450">
+            <label for="imagen">Foto de Perfil:</label>
+            <input type="file"  (change)="onFileChange($event)" accept="image/*" id="imagen" name="imagen">
+            <div *ngIf="imageSrc">
+              <img id="imagen-preview"  [src]="imageSrc" alt="Preview" />
+            </div>
+          </div>
+
+          <div class="input450">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" cols="30" rows="11" placeholder="Agrega una Descripcion"></textarea>
+          </div>
+        </div>
+      </form>
       <div class="buttons">
         <button class="cancel-button" (click)="anteriorPaso()">Paso Anterior</button>
         <button class="login-button" (click)="siguientePaso()">Siguiente Paso</button>
@@ -100,8 +123,191 @@
 
     <div *ngIf="pasoActual === 4">
       <!-- Paso 4 -->
-      <h2>Paso 4: Confirmación</h2>
-      <!-- Aquí van los campos del paso 4 -->
+      <div class="separator">
+        <div class="circle-lleno"><p>1</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>2</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>3</p></div>
+        <div class="line"></div>
+        <div class="circle-lleno"><p>4</p></div>
+      </div>
+      <h3>Selecciona tus Generos Favoritos</h3>
+      <h4>Minimo 3 generos</h4>
+      <div class="panelGeneros">
+        <div class="lineaGeneros">
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+
+        </div>
+        <div class="lineaGeneros">
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+
+        </div>
+        <div class="lineaGeneros">
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+
+        </div>
+        <div class="lineaGeneros">
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+          <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+            <div class="mas">
+              <img [src]="generoSeleccionado ? './assets/img/menos.png' : './assets/img/mas.png'">
+            </div>
+            <div class="nombreGenero">
+              <p>Genero</p>
+            </div>
+          </button>
+
+        </div>
+      </div>
       <div class="buttons">
         <button class="cancel-button" (click)="anteriorPaso()">Paso Anterior</button>
         <button class="login-button" (click)="guardar()">Guardar</button>

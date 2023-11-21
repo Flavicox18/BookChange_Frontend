@@ -23,6 +23,11 @@ h2 {
   font-weight: bold;
   font-size: 36px;
 }
+h3{
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 30px;
+}
 
 .inputs{
   display: flex;
@@ -59,6 +64,14 @@ label {
 
 input {
   width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-size: 18px;
+}
+textarea{
   padding: 8px;
   margin-bottom: 16px;
   box-sizing: border-box;
@@ -185,3 +198,73 @@ a:hover{
 a:active{
   color: #693CC7;
 }
+
+#imagen-preview {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  background-color: #ffffff;
+  object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del contenedor sin deformarse */
+}
+
+.genero{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0px;
+
+  &.selected {
+    .mas {
+      background-color: #6b35f8;
+    }
+
+    .nombreGenero {
+      background-color: #6b35f8;
+    }
+  }
+
+  .mas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 10px 0px 0px 10px;
+    border: 3px solid #000000;
+
+  }
+  .nombreGenero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 0px 10px 10px 0px;
+
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-right: 3px solid #000000;
+
+    p{
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.panelGeneros{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.lineaGeneros{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+

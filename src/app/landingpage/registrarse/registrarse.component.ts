@@ -20,6 +20,33 @@ export class RegistrarseComponent {
   pasoActual: number = 1;
   selectedProvincia: string = '';
   selectedDepartamento: string = '';
+  imageSrc: string | ArrayBuffer | null = null; // Inicializa con null
+  generoSeleccionado = false;
+
+  toggleGenero() {
+    this.generoSeleccionado = !this.generoSeleccionado;
+  }
+  onFileChange(event: any): void {
+    const reader = new FileReader();
+    const allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
+
+    if (event.target.files && event.target.files.length) {
+      const file = event.target.files[0];
+
+      if (allowedImageTypes.includes(file.type)) {
+        reader.onload = () => {
+          this.imageSrc = reader.result;
+        };
+
+        reader.readAsDataURL(file);
+      } else {
+        // Aquí puedes manejar el caso en el que el archivo no sea una imagen válido
+        alert('Por favor, selecciona un archivo de imagen válido (JPEG, PNG, GIF).');
+        // También puedes restablecer el valor del input para deshacer la selección no válida
+        event.target.value = null;
+      }
+    }
+  }
 
   provincias: Provincia[] = [
     { codigo: '001', nombre: 'Amazonas' },
