@@ -11,6 +11,7 @@ import { SolicitudIntercambioComponent } from './solicitud-intercambio/solicitud
 import { AgregarLibroComponent } from './agregar-libro/agregar-libro.component';
 import {FormsModule} from "@angular/forms";
 import { FooterPrincipalComponent } from './footer-principal/footer-principal.component';
+import {ChatIntercambioComponent} from "./chat-intercambio/chat-intercambio.component";
 
 
 
@@ -21,7 +22,8 @@ import { FooterPrincipalComponent } from './footer-principal/footer-principal.co
     DetalleLibroComponent,
     SolicitudIntercambioComponent,
     AgregarLibroComponent,
-    FooterPrincipalComponent
+    FooterPrincipalComponent,
+    ChatIntercambioComponent
   ],
   imports: [
     CommonModule,

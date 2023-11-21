@@ -1,0 +1,220 @@
+.container {
+
+  .ola {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .columna-izquierda {
+    flex: 2;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #EEEFFF !important;
+
+  }
+
+  .columna-medio{
+    flex: 6;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .columna-derecha {
+    flex: 2;
+    width: 33%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #EEEFFF !important;
+  }
+
+  .imagen-libro {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    img {
+      width: 40%;
+      height: 40%;
+      object-fit: cover;
+    }
+  }
+
+  .flechas {
+
+    img {
+      width: 10%;
+      height: 10%;
+      flex-direction: column;
+      object-fit: cover;
+    }
+  }
+
+  .fila1 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #8a8a8a;
+      padding: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .circle {
+    width: 70px; /* Ajusta el tamaño del círculo */
+    height: 70px; /* Ajusta el tamaño del círculo*/
+    background-color: #333; /* Color de fondo del círculo */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .button {
+    background-color: #693CC7;
+    font-size: 17px;
+    color: #fff;
+    padding: 8px 18px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+    margin: 5px;
+  }
+
+  .button:hover{
+    background-color: #6b35f8;
+    color: #ffffff;
+  }
+
+  .button:active{
+    background-color: #693CC7;
+    color: #ffffff;
+  }
+
+  .button1{
+    background-color: #000;
+    font-size: 17px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+    margin: 5px;
+  }
+
+  .button1:hover{
+    background-color: #101010;
+    color: #ffffff;
+  }
+
+  .button1:active{
+    background-color: #101010;
+    color: #ffffff;
+  }
+
+  .fila2 {
+    display: flex;
+    border: 2px solid #000;
+    padding: 10px;
+
+    h1{
+      margin-bottom: 10px;
+    }
+
+    h3{
+      margin-top: 10px;
+      align-items: center;
+    }
+
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .fila3{
+
+    h3{
+      margin-top: 20px;
+      margin-left: 60%;
+      border: 2px solid #000;
+      border-radius: 25px;
+    }
+
+    h4{
+      margin-left: 80%;
+    }
+
+    p{
+      margin-right: 80%;
+      font-size: 14px;
+      border: 2px solid #000;
+      border-radius: 25px;
+    }
+
+    a{
+      margin-right: 80%;
+      font-size: 14px;
+    }
+
+
+  }
+
+  .chat-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 20px;
+    padding: 8px;
+
+    .chat-input {
+      flex-grow: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      max-width: 100%;
+    }
+
+    .send-button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #2196f3;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
