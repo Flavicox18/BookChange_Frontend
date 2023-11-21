@@ -1,7 +1,32 @@
 .container {
-
+.row{
+  display: flex;
+  justify-content: space-between;
+}
   padding: 15px;
+  .botonAgregar{
+    background-color: #693CC7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 10px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 3px solid #000;
+    transition: 0.3s ease;
+  }
 
+  .botonAgregar:hover {
+    background-color: #6b35f8;
+    color: #ffffff;
+  }
+
+  .botonAgregar:active {
+    background-color: #693CC7;
+    color: #ffffff;
+  }
   .fila {
 
     .cuadrado {

@@ -4,7 +4,7 @@
     <div class="flecha izquierda" (click)="moverCarrusel(-1)">
       <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
     </div>
-    <div class="librosPopulares" #carruselContainer>
+    <div routerLink="/principal/detalleLibro" class="librosPopulares" #carruselContainer>
       <div class="cardLibro" *ngFor="let libro of libros; let i = index">
         <img class="imgLibro" src="{{ libro.imagen }}" alt="Imagen Libro">
         <div class="infoLibro">

@@ -5,9 +5,9 @@
     <div class="columna-izquierda">
       <h1>Libro Ofrecido</h1>
       <div class="imagen-libro">
-        <img src="./assets/img/librito.png" alt="Libro">
+        <img src="./assets/img/Libro2.webp" alt="Libro">
       </div>
-      <h1>Capitán Calzoncillos</h1>
+      <h1>Harry Potter y la Piedra Filosofal</h1>
         <button class="button">CAMBIAR LIBRO</button>
     </div>
 
@@ -59,8 +59,8 @@
   </div>
 
   <div class="btn">
-    <button class="button1">CANCELAR</button>
-    <button class="buttonend">SOLICITAR INTERCAMBIO</button>
+    <button routerLink="/principal/detalleLibro" class="button1"  (click)="cancelar()">CANCELAR</button>
+    <button routerLink="/principal/chatIntercambio" class="buttonend"  (click)="guardar()">SOLICITAR INTERCAMBIO</button>
   </div>
 
 </div>

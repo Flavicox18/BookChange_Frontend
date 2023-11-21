@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import { FooterPrincipalComponent } from './footer-principal/footer-principal.component';
 import {ChatIntercambioComponent} from "./chat-intercambio/chat-intercambio.component";
 import { MainPrincipalComponent } from './main-principal/main-principal.component';
+import {VerLibroComponent} from "./ver-libro/ver-libro.component";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MainPrincipalComponent } from './main-principal/main-principal.componen
     AgregarLibroComponent,
     FooterPrincipalComponent,
     ChatIntercambioComponent,
-    MainPrincipalComponent
+    MainPrincipalComponent,
+    VerLibroComponent
   ],
   imports: [
     CommonModule,

@@ -12,4 +12,13 @@ export class AgregarLibroComponent {
     // y actualizar los resultados en this.resultados
     // this.resultados = servicio.buscarLibrosPorISBN(this.terminoBusqueda);
   }
+  cancelar() {
+    // Aquí puedes implementar la lógica para cancelar el registro.
+    window.alert('Seguro que desea cancelar?');
+  }
+
+  guardar() {
+    // Aquí puedes implementar la lógica para guardar los datos del registro.
+    window.alert('Libro agregado con exito!!!');
+  }
 }
