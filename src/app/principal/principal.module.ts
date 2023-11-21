@@ -8,6 +8,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import { SolicitudIntercambioComponent } from './solicitud-intercambio/solicitud-intercambio.component';
+import { AgregarLibroComponent } from './agregar-libro/agregar-libro.component';
+import {FormsModule} from "@angular/forms";
+import { FooterPrincipalComponent } from './footer-principal/footer-principal.component';
 
 
 
@@ -16,14 +19,17 @@ import { SolicitudIntercambioComponent } from './solicitud-intercambio/solicitud
     PrincipalComponent,
     NavPrincipalComponent,
     DetalleLibroComponent,
-    SolicitudIntercambioComponent
+    SolicitudIntercambioComponent,
+    AgregarLibroComponent,
+    FooterPrincipalComponent
   ],
   imports: [
     CommonModule,
     PrincipalRoutingModule,
     MatGridListModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ]
 })
 export class PrincipalModule { }

@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Agregar Libro</h1>
+
+  <div class="barra-busqueda">
+    <input type="text" placeholder="Buscar por número de ISBN" [(ngModel)]="terminoBusqueda" />
+    <button (click)="buscar()"> Buscar </button>
+  </div>
+
+  <form class="division">
+    <div class="img">
+      <div class="imgLibro">
+      </div>
+    </div>
+
+    <div class="formulario">
+      <div class="form-sec-1">
+
+          <label for="nombreLibro">Nombre del Libro:</label>
+          <input type="text" id="nombreLibro" name="nombreLibro" placeholder="Nombre del Libro">
+
+          <label for="autorLibro">Autor del Libro:</label>
+          <input type="text" id="autorLibro" name="autorLibro" placeholder="Nombre del Autor">
+
+          <label for="generos">Genero(s) del Libro:</label>
+          <input type="text" id="generos" name="generos" placeholder="Genero(s)">
+
+          <label for="añoLanzamiento">Año de Lanzamiento:</label>
+          <input type="text" id="añoLanzamiento" name="añoLanzamiento" placeholder="Año de Lanzamiento  ">
+
+      </div>
+      <div class="form-sec-2">
+        <label for="estadoLibro">Estado del Libro:</label>
+        <select id="estadoLibro" name="estadoLibro">
+          <option value="nuevo">Nuevo</option>
+          <option value="usado">Usado</option>
+          <option value="muyUsado">Muy Usado</option>
+          <option value="deteriorado">Deteriorado</option>
+        </select>
+
+        <label for="descripcion">Descripcion</label>
+        <textarea id="descripcion" name="descripcion" cols="30" rows="6" placeholder="Agrega una Descripcion"></textarea>
+      </div>
+    </div>
+  </form>
+  <div class="botones">
+    <button class="cancel-button">Cancelar</button>
+    <button class="login-button">Agregar</button>
+  </div>
+</div>
