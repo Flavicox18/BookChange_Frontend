@@ -1,0 +1,103 @@
+.container {
+
+  padding: 15px;
+
+  .fila {
+
+    .cuadrado {
+      margin: 5px;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+
+      .img-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .imagen-libro {
+        margin: 15px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 49px;
+        width: 67.5%;
+        height: 76.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: opacity 0.3s ease-in-out;
+        z-index: 2;
+      }
+
+      .button1{
+        background-color: #693CC7;
+        font-size: 20px;
+        color: #fff;
+        padding: 8px 10px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        border: 3px solid #000;
+        transition: 0.3s ease;
+      }
+
+      .button1:hover {
+        background-color: #6b35f8;
+        color: #ffffff;
+      }
+
+      .button1:active {
+        background-color: #693CC7;
+        color: #ffffff;
+      }
+
+      .buttonend {
+        background-color: #070707;
+        font-size: 20px;
+        color: #fff;
+        padding: 8px 14px;
+        cursor: pointer;
+        border-radius: 25px;
+        border: 3px solid #000;
+        transition: 0.3s ease;
+      }
+
+      .buttonend:hover {
+        background-color: #171717;
+        color: #ffffff;
+      }
+
+      .buttonend:active {
+        background-color: #171717;
+        color: #ffffff;
+      }
+    }
+  }
+}
