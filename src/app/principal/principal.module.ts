@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import { FooterPrincipalComponent } from './footer-principal/footer-principal.component';
 import {ChatIntercambioComponent} from "./chat-intercambio/chat-intercambio.component";
 import { MainPrincipalComponent } from './main-principal/main-principal.component';
+import { VerPerfilComponent } from './ver-perfil/ver-perfil.component';
 import {VerLibroComponent} from "./ver-libro/ver-libro.component";
 
 
@@ -26,7 +27,8 @@ import {VerLibroComponent} from "./ver-libro/ver-libro.component";
     FooterPrincipalComponent,
     ChatIntercambioComponent,
     MainPrincipalComponent,
-    VerLibroComponent
+    VerLibroComponent,
+    VerPerfilComponent
   ],
   imports: [
     CommonModule,

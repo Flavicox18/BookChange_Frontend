@@ -1,0 +1,150 @@
+
+<div class="container">
+
+  <div class="ola">
+
+    <div class="columna-medio">
+
+      <div class="fila1">
+
+        <div class="perfil1">
+          <div class="circle"><img src="./assets/img/Ha.jpg" alt="perfil" class="circle"></div>
+          <button class="button1">Cerrar Sesión</button>
+        </div>
+
+        <div class="formulario">
+          <div class="form-sec-1">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder=" Edward" disabled>
+
+            <label for="direccion">Ubicación</label>
+            <input type="text" id="direccion" name="direccion" placeholder=" La libertad, Trujillo, Victor Larco Herrera" disabled>
+
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" placeholder=" ecastillo@upao.edu.pe" disabled>
+
+            <div class="perfil">
+              <button class="button">Editar Perfil</button>
+            </div>
+          </div>
+
+          <div class="form-sec-2">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" placeholder=" Castillo" disabled>
+
+            <label for="telefono">Teléfono</label>
+            <input type="number" id="telefono" placeholder=" 943672882" disabled>
+
+            <label for="dni">DNI</label>
+            <input type="number" id="dni" placeholder=" 72958204" disabled>
+          </div>
+
+
+          <div class="form-dos">
+
+            <div class="form-sec-3">
+              <label for="descripcion">Descripción</label>
+              <textarea id="descripcion" name="descripcion" cols="40" rows="6" placeholder="Me gusta leer libros de la historia de la ingeniería..." disabled></textarea>
+              <label>Géneros favoritos</label>
+            </div>
+
+            <div class="form-sec-4">
+              <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+                <div class="mas">
+                  <img [src]="generoSeleccionado ? './assets/img/mas.png' : './assets/img/mas.png'">
+                </div>
+                <div class="nombreGenero">
+                  <p>Ciencia Ficción</p>
+                </div>
+              </button>
+
+              <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+                <div class="mas">
+                  <img [src]="generoSeleccionado ? './assets/img/mas.png' : './assets/img/mas.png'">
+                </div>
+                <div class="nombreGenero">
+                  <p>Drama</p>
+                </div>
+              </button>
+
+              <button class="genero" [class.selected]="generoSeleccionado" (click)="toggleGenero()">
+                <div class="mas">
+                  <img [src]="generoSeleccionado ? './assets/img/mas.png' : './assets/img/mas.png'">
+                </div>
+                <div class="nombreGenero">
+                  <p>Historia</p>
+                </div>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="columna-abajo">
+
+        <div class="fila2">
+          <h1>Solicitudes de intercambio</h1>
+
+          <div class="solicitudes">
+            <img src="./assets/img/librito.png" alt="libro" class="img1">
+            <div class="texto">
+              <h3>Cien años de soledad</h3>
+              <h3>Gabriel García Márquez</h3>
+              <h3>Solicitado por Edilberto</h3>
+            </div>
+            <img src="./assets/img/Hb.jpg" alt="perfil" class="img2">
+          </div>
+
+          <div class="solicitudes">
+            <img src="./assets/img/Libro2.webp" alt="libro" class="img1">
+            <div class="texto">
+              <h3>Harry Potter</h3>
+              <h3>J. K. Rowling</h3>
+              <h3>Solicitado por Liliana</h3>
+            </div>
+            <img src="./assets/img/imgM.jpg" alt="perfil" class="img2">
+          </div>
+
+          <div class="solicitudes">
+            <img src="./assets/img/Libro5.webp" alt="libro" class="img1">
+            <div class="texto">
+              <h3>El principito</h3>
+              <h3>Antoine de Saint-Exupéry</h3>
+              <h3>Solicitado por Edilberto</h3>
+            </div>
+            <img src="./assets/img/Hb.jpg" alt="perfil" class="img2">
+          </div>
+
+        </div>
+
+        <div class="fila3">
+          <h1>Mis Libros</h1>
+          <div class="carrusel1">
+            <div class="flecha izquierda" (click)="moverCarrusel(-1)">
+              <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
+            </div>
+            <div class="librosPopulares" #carruselContainer>
+              <div class="cardLibro" *ngFor="let libro of libros; let i = index">
+                <img class="imgLibro" src="{{ libro.imagen }}" alt="Imagen Libro">
+                <div class="infoLibro">
+                  <h3>{{ libro.titulo }}</h3>
+                  <h4>{{ libro.autor }}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="flecha derecha" (click)="moverCarrusel(1)">
+              <img src="./assets/img/FlechaDer.svg" alt="Flecha Derecha">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+
+  </div>
+
+</div>
