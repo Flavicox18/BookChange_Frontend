@@ -26,32 +26,29 @@
 
     <div class="columna-medio">
 
-      <div class="fila2">
-        <div class="circle"><img src="./assets/img/imgM.jpg" alt="img-circulo"></div>
-        <h3>Laura Patricia</h3>
-      </div>
-
-      <div class="fila3">
-        <h3>Hola, buenas tardes</h3>
-        <h4>11:12</h4>
-
-        <p>Hola</p>
-        <a>11:13</a>
-
-        <h3>En que parte de Perú vives?</h3>
-        <h4>11:15</h4>
-
-        <p>Vivo en Ica</p>
-        <a>11:18</a>
-
-        <h3>Perfecto, como intercambiamos los libros?</h3>
-        <h4>11:23</h4>
-
-        <div class="chat-input-container">
-          <input type="text" placeholder="Escribe tu mensaje..." class="chat-input">
-          <button class="send-button">Enviar</button>
+      <div class="chat_window">
+        <div class="top_menu">
+          <img class="circle" src="./assets/img/imgM.jpg" alt="img-circulo">
+          <h1>Laura Patricia</h1>
         </div>
-
+        <ul class="messages">
+          <li class="message right" *ngFor="let item of messageList"
+              [ngClass]="{'left': item.message_side === 'receiver', 'right': item.message_side === 'sender'}"
+          >
+            <div class="avatar"></div>
+            <div class="text_wrapper">
+              <div class="text">{{item.message}}</div>
+            </div>
+          </li>
+        </ul>
+        <div class="bottom">
+          <div class="mensaje">
+            <input placeholder="Message..." [(ngModel)]="messageInput" (keyup.enter)="sendMessage()"/>
+          </div>
+          <div class="enviar" (click)="sendMessage()">
+            <div class="text">Enviar</div>
+          </div>
+        </div>
       </div>
 
     </div>

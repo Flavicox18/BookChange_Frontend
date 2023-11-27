@@ -11,9 +11,9 @@ import {VerPerfilComponent} from "./ver-perfil/ver-perfil.component";
 
 const routes: Routes = [
   { path: '', component: PrincipalComponent, children: [ {path: '', component: MainPrincipalComponent}]},
-  { path: 'chatIntercambio', component: PrincipalComponent, children: [ {path: '', component: ChatIntercambioComponent}]},
-  { path: 'verLibro', component: PrincipalComponent, children: [ {path: '', component: VerLibroComponent}]},
-  { path: 'verPerfil', component: PrincipalComponent, children: [ {path: '', component: VerPerfilComponent}]},
+  { path: '', component: PrincipalComponent, children: [ {path: 'chatIntercambio', component: ChatIntercambioComponent}]},
+  { path: '', component: PrincipalComponent, children: [ {path: 'verLibro', component: VerLibroComponent}]},
+  { path: '', component: PrincipalComponent, children: [ {path: 'verPerfil', component: VerPerfilComponent}]},
   { path: '', component: PrincipalComponent, children: [ {path: 'agregarLibro', component: AgregarLibroComponent}]},
   { path: '', component: PrincipalComponent, children: [ {path: 'detalleLibro', component: DetalleLibroComponent}]},
   { path: '', component: PrincipalComponent, children: [ {path: 'solicitudIntercambio', component: SolicitudIntercambioComponent}]},
