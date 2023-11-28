@@ -225,6 +225,7 @@
 
   input[type="date"],
   input[type="number"],
+  select,
   textarea {
     width: 100%;
     padding: 8px;
@@ -238,4 +239,10 @@
   }
 
 }
-
+.subcampo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}

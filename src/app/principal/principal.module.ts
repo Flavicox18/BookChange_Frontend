@@ -9,7 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import { SolicitudIntercambioComponent } from './solicitud-intercambio/solicitud-intercambio.component';
 import { AgregarLibroComponent } from './agregar-libro/agregar-libro.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import { FooterPrincipalComponent } from './footer-principal/footer-principal.component';
 import {ChatIntercambioComponent} from "./chat-intercambio/chat-intercambio.component";
 import { MainPrincipalComponent } from './main-principal/main-principal.component';
@@ -36,7 +36,8 @@ import {VerLibroComponent} from "./ver-libro/ver-libro.component";
     MatGridListModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PrincipalModule { }
