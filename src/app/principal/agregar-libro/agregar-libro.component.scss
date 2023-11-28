@@ -107,7 +107,14 @@ h1{
         margin-bottom: 2px;
 
       }
-
+      input {
+        border: 2px solid #000000;
+        border-radius: 15px;
+        font-size: 18px;
+        width: 90%;
+        margin-bottom: 18px;
+        padding: 3px;
+      }
       textarea{
         border: 2px solid #000000;
         border-radius: 15px;
