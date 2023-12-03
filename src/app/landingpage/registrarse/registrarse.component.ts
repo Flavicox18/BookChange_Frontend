@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthenticationService} from "../../services/authentication.service";
+import { Registrarse} from "../../models/usuario";
+import { FormBuilder, FormGroup, Validators} from "@angular/forms";
+
 
 interface Provincia {
   codigo: string;
@@ -16,16 +20,67 @@ interface Departamento {
   templateUrl: './registrarse.component.html',
   styleUrls: ['./registrarse.component.scss']
 })
-export class RegistrarseComponent {
+export class RegistrarseComponent implements OnInit{
+
   pasoActual: number = 1;
   selectedProvincia: string = '';
   selectedDepartamento: string = '';
   imageSrc: string | ArrayBuffer | null = null; // Inicializa con null
   generoSeleccionado = false;
-
   toggleGenero() {
     this.generoSeleccionado = !this.generoSeleccionado;
   }
+
+  registrarseModel: Registrarse = new Registrarse();
+
+  constructor(private fb: FormBuilder, private authenticationService: AuthenticationService) {
+    this.datosForm = this.fb.group({});
+  }
+  ngOnInit() {
+    this.datosForm = this.fb.group({
+      correo: [null,[Validators.required, Validators.email]],
+      contrasena: [null,[Validators.required]],
+      nombre: [null,[Validators.required]],
+      dni: [null,[Validators.required]],
+      provincia: [null,[Validators.required]],
+      apellido: [null,[Validators.required]],
+      telefono: [null,[Validators.required]],
+      departamento: [null,[Validators.required]],
+      imgPerfil: [null,[Validators.required]],
+      descripcion: [null,[Validators.required]],
+    })
+    console.warn()
+  }
+
+  datosForm: FormGroup
+  registrarUsuario() {
+    // Recupera los datos del formulario
+    const datosUsuario = this.datosForm.value;
+
+    // Asigna los datos al modelo Registrarse
+    this.registrarseModel.correo = datosUsuario.correo;
+    this.registrarseModel.contrasena = datosUsuario.contrasena;
+    this.registrarseModel.dni = datosUsuario.dni;
+    this.registrarseModel.nombre = datosUsuario.nombre;
+    this.registrarseModel.apellido = datosUsuario.apellido;
+    this.registrarseModel.telefono = datosUsuario.telefono;
+    this.registrarseModel.descripcion = datosUsuario.descripcion;
+    this.registrarseModel.fotoPerfil = datosUsuario.imgPerfil;
+
+    console.log("datos: ", datosUsuario)
+    // Llama al servicio para guardar el usuario
+    this.authenticationService.guardarUsuario(this.registrarseModel).subscribe(
+      () => {
+        // Maneja el éxito, por ejemplo, redirecciona a otra página
+        console.log('Usuario registrado exitosamente');
+      },
+      (error) => {
+        // Maneja el error, muestra un mensaje de error, etc.
+        console.error('Error al registrar usuario', error);
+      }
+    );
+  }
+
   onFileChange(event: any): void {
     const reader = new FileReader();
     const allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -569,10 +624,5 @@ export class RegistrarseComponent {
   cancelar() {
     // Aquí puedes implementar la lógica para cancelar el registro.
     window.alert('Seguro que desea cancelar su registro');
-  }
-
-  guardar() {
-    // Aquí puedes implementar la lógica para guardar los datos del registro.
-    window.alert('Registro Exitoso!!!');
   }
 }

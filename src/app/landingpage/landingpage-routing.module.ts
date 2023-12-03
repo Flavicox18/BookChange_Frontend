@@ -7,8 +7,8 @@ import {RegistrarseComponent} from "./registrarse/registrarse.component";
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent, children: [ {path: '', component: BodylandingComponent}]},
-  { path: '', component: LandingpageComponent, children: [ { path: 'inicioSesion', component: IniciarSesionComponent}]},
-  { path: '', component: LandingpageComponent, children: [ { path: 'registrarse', component: RegistrarseComponent}]},
+  { path: 'inicioSesion', component: LandingpageComponent, children: [ { path: '', component: IniciarSesionComponent}]},
+  { path: 'registrarse', component: LandingpageComponent, children: [ { path: '', component: RegistrarseComponent}]},
 ];
 
 @NgModule({

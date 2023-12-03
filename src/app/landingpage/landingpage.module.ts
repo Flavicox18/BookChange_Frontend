@@ -7,7 +7,7 @@ import { BodylandingComponent } from './bodylanding/bodylanding.component';
 import { FooterlandingComponent } from './footerlanding/footerlanding.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -18,12 +18,13 @@ import {FormsModule} from "@angular/forms";
     BodylandingComponent,
     FooterlandingComponent,
     IniciarSesionComponent,
-    RegistrarseComponent
+    RegistrarseComponent,
   ],
   imports: [
     CommonModule,
     LandingpageRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class LandingpageModule { }
