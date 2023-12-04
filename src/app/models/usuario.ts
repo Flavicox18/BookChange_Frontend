@@ -1,5 +1,3 @@
-import {Ubicacion} from "./ubicacion";
-
 export class Registrarse{
 
   dni: number
@@ -10,5 +8,6 @@ export class Registrarse{
   fotoPerfil: string
   telefono: number
   descripcion: string
-  ubicacion: Ubicacion
+  provincia: string
+  departamento: string
 }

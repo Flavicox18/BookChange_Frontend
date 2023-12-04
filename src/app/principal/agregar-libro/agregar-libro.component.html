@@ -2,13 +2,14 @@
   <h1>Agregar Libro</h1>
 
   <div class="barra-busqueda">
-    <input type="text" placeholder="Buscar por número de ISBN" [(ngModel)]="terminoBusqueda" />
-    <button (click)="buscar()"> Buscar </button>
+    <input type="text" id="isbn" placeholder="Buscar por número de ISBN" [(ngModel)]="isbn">
+    <button (click)="buscar()" > Buscar </button>
   </div>
 
   <form class="division">
     <div class="img">
       <div class="imgLibro">
+        <img [src]="fotoLibro" alt="Imagen Preview">
       </div>
     </div>
 
@@ -16,26 +17,26 @@
       <div class="form-sec-1">
 
           <label for="nombreLibro">Nombre del Libro:</label>
-          <input type="text" id="nombreLibro" name="nombreLibro" placeholder="Nombre del Libro">
+          <input type="text" id="nombreLibro" name="nombreLibro" placeholder="Nombre del Libro" [(ngModel)]="nombreLibro" [disabled]="libroResultado.nombre !== '' " >
 
           <label for="generos">Genero(s) del Libro:</label>
-          <input type="text" id="generos" name="generos" placeholder="Genero(s)">
+          <input type="text" id="generos" name="generos" placeholder="Genero(s)"[(ngModel)]="generoLibro" [disabled]="libroResultado.genero !== '' "  >
 
           <label for="fechaLanzamiento">Fecha de Lanzamiento:</label>
-          <input type="text" id="fechaLanzamiento" name="fechaLanzamiento" placeholder="Año de Lanzamiento  ">
+          <input type="text" id="fechaLanzamiento" name="fechaLanzamiento" placeholder="AAAA-MM-DD" [(ngModel)]="fechaLibro" [disabled]="libroResultado.fechaLanzamiento !== '' ">
 
           <label for="editorial">Editorial del Libro:</label>
-          <input type="text" id="editorial" name="editorial" placeholder="Editorial">
+          <input type="text" id="editorial" name="editorial" placeholder="Editorial" [(ngModel)]="editorialLibro" [disabled]="libroResultado.editorial !== '' " >
 
-          <label for="idioma">Idioma del Libro:</label>
-          <input type="text" id="idioma" name="idioma" placeholder="Idioma">
+          <label for="fotoLibro">Foto del Libro (Ingrese URL):</label>
+          <input type="url" id="fotoLibro" name="fotoLibro" placeholder="Foto Libro" [(ngModel)]="fotoLibro" [disabled]="libroResultado.foto !== '' " >
       </div>
       <div class="form-sec-2">
         <label for="autorLibro">Autor del Libro:</label>
-        <input type="text" id="autorLibro" name="autorLibro" placeholder="Nombre del Autor">
+        <input type="text" id="autorLibro" name="autorLibro" placeholder="Nombre del Autor" [(ngModel)]="autorLibro" [disabled]="libroResultado.autor !== '' " >
 
         <label for="estadoLibro">Estado del Libro:</label>
-        <select id="estadoLibro" name="estadoLibro">
+        <select id="estadoLibro" name="estadoLibro" [(ngModel)]="estadoLibro" >
           <option value="nuevo">Nuevo</option>
           <option value="usado">Usado</option>
           <option value="muyUsado">Muy Usado</option>
@@ -43,12 +44,12 @@
         </select>
 
         <label for="descripcion">Descripcion</label>
-        <textarea id="descripcion" name="descripcion" cols="30" rows="7" placeholder="Agrega una Descripcion"></textarea>
+        <textarea id="descripcion" name="descripcion" cols="30" rows="7" placeholder="Agrega una Descripcion" [(ngModel)]="sinopsisLibro" [disabled]="libroResultado.sinopsis !== '' " ></textarea>
       </div>
     </div>
   </form>
   <div class="botones">
     <button routerLink="/principal/verLibro" class="cancel-button" (click)="cancelar()">Cancelar</button>
-    <button routerLink="/principal/verLibro" class="login-button" (click)="guardar()">Agregar</button>
+    <button class="login-button" (click)="guardar()">Agregar</button>
   </div>
 </div>

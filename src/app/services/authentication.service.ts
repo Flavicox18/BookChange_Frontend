@@ -15,4 +15,10 @@ export class AuthenticationService {
   guardarUsuario(usuario: Registrarse): Observable<void> {
     return this.httpClient.post<void>(`${this.baseUrl}/guardar`, usuario);
   }
+
+  iniciarSesion(correo: string, contrasena: string): Observable<any> {
+    const requestBody = { correo, contrasena };
+    return this.httpClient.post<any>(`${this.baseUrl}/iniciar-sesion`, requestBody);
+  }
+
 }

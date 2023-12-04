@@ -42,9 +42,9 @@ export class RegistrarseComponent implements OnInit{
       contrasena: [null,[Validators.required]],
       nombre: [null,[Validators.required]],
       dni: [null,[Validators.required]],
-      provincia: [null,[Validators.required]],
       apellido: [null,[Validators.required]],
       telefono: [null,[Validators.required]],
+      provincia: [null,[Validators.required]],
       departamento: [null,[Validators.required]],
       imgPerfil: [null,[Validators.required]],
       descripcion: [null,[Validators.required]],
@@ -66,6 +66,8 @@ export class RegistrarseComponent implements OnInit{
     this.registrarseModel.telefono = datosUsuario.telefono;
     this.registrarseModel.descripcion = datosUsuario.descripcion;
     this.registrarseModel.fotoPerfil = datosUsuario.imgPerfil;
+    this.registrarseModel.provincia = datosUsuario.provincia;
+    this.registrarseModel.fotoPerfil = datosUsuario.departamento;
 
     console.log("datos: ", datosUsuario)
     // Llama al servicio para guardar el usuario
