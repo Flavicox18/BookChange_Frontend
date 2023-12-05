@@ -15,25 +15,25 @@
         <div class="formulario">
           <div class="form-sec-1">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder=" Edward" disabled>
+            <input type="text" id="nombre" name="nombre" [value]="perfil.nombre" disabled>
 
             <label for="direccion">Ubicación</label>
-            <input type="text" id="direccion" name="direccion" placeholder=" La libertad, Trujillo, Victor Larco Herrera" disabled>
+            <input type="text" id="direccion" name="direccion" [value]="perfil.departamento" disabled>
 
             <label for="correo">Correo</label>
-            <input type="email" id="correo" name="correo" placeholder=" ecastillo@upao.edu.pe" disabled>
+            <input type="email" id="correo" name="correo" [value]="perfil.correo" disabled>
 
           </div>
 
           <div class="form-sec-2">
             <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" placeholder=" Castillo" disabled>
+            <input type="text" id="apellidos" [value]="perfil.apellido" disabled>
 
             <label for="telefono">Teléfono</label>
-            <input type="number" id="telefono" placeholder=" 943672882" disabled>
+            <input type="number" id="telefono" [value]="perfil.telefono" disabled>
 
             <label for="dni">DNI</label>
-            <input type="number" id="dni" placeholder=" 72958204" disabled>
+            <input type="number" id="dni" [value]="perfil.dni" disabled>
           </div>
 
 
@@ -41,7 +41,7 @@
 
             <div class="form-sec-3">
               <label for="descripcion">Descripción</label>
-              <textarea id="descripcion" name="descripcion" cols="40" rows="8" placeholder="Me gusta leer libros de la historia de la ingeniería..." disabled></textarea>
+              <textarea id="descripcion" name="descripcion" cols="40" rows="8" [value]="perfil.descripcion" disabled></textarea>
             </div>
           </div>
         </div>
@@ -84,26 +84,7 @@
 
         </div>
 
-        <div class="fila3">
-          <h1>Mis Libros</h1>
-          <div class="carrusel1">
-            <div class="flecha izquierda" (click)="moverCarrusel(-1)">
-              <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
-            </div>
-            <div class="librosPopulares" #carruselContainer>
-              <div class="cardLibro" *ngFor="let libro of libros; let i = index">
-                <img class="imgLibro" src="{{ libro.imagen }}" alt="Imagen Libro">
-                <div class="infoLibro">
-                  <h3>{{ libro.titulo }}</h3>
-                  <h4>{{ libro.autor }}</h4>
-                </div>
-              </div>
-            </div>
-            <div class="flecha derecha" (click)="moverCarrusel(1)">
-              <img src="./assets/img/FlechaDer.svg" alt="Flecha Derecha">
-            </div>
-          </div>
-        </div>
+
 
       </div>
 

@@ -62,7 +62,11 @@ export class AgregarLibroComponent{
         this.fechaLibro=this.libroResultado.fechaLanzamiento
         this.editorialLibro=this.libroResultado.editorial
         this.autorLibro=this.libroResultado.autor
-        this.sinopsisLibro=this.libroResultado.sinopsis
+        if (this.libroResultado.sinopsis && this.libroResultado.sinopsis.length > 250) {
+          this.sinopsisLibro = this.libroResultado.sinopsis.substring(0, 250); // Recortar la sinopsis a 250 caracteres
+        } else {
+          this.sinopsisLibro = this.libroResultado.sinopsis; // Sinopsis dentro del límite
+        }
         this.fotoLibro=this.libroResultado.foto
         this.isbnLibro=this.libroResultado.isbn
 

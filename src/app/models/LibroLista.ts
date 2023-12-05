@@ -1,4 +1,4 @@
-export class Libros {
+export interface LibroLista {
   idLibro: number;
   nombre: string;
   autor: string;
@@ -6,7 +6,7 @@ export class Libros {
   editorial: string;
   isbn: number;
   estado: string;
-  fechaLanzamiento: string;
+  fechaLanzamiento: Date;
   sinopsis: string;
   foto: string;
 }

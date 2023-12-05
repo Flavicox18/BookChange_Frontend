@@ -1,12 +1,32 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AuthenticationService} from "../../services/authentication.service";
+import {PerfilService} from "../../services/perfil.service";
+import {ActivatedRoute} from "@angular/router";
+import {Usuario} from "../../models/perfil";
 
 @Component({
   selector: 'app-ver-perfil',
   templateUrl: './ver-perfil.component.html',
   styleUrls: ['./ver-perfil.component.scss']
 })
-export class VerPerfilComponent {
+export class VerPerfilComponent implements OnInit{
+
   generoSeleccionado = false;
+
+  perfil: Usuario;
+
+  constructor(
+    private perfilService: PerfilService,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit(): void {
+    const idUsuarioParam = this.route.snapshot.paramMap.get('id');
+    const idUsuario = idUsuarioParam ? +idUsuarioParam : 4;
+    console.log('ID de usuario:', idUsuario); // Verifica si este log muestra el valor esperado
+
+    this.obtenerPerfil(idUsuario);
+  }
 
   toggleGenero() {
     this.generoSeleccionado = !this.generoSeleccionado;
@@ -34,4 +54,17 @@ export class VerPerfilComponent {
     // Aquí puedes implementar la lógica para cancelar el registro.
     window.alert('Seguro que desea cerrar su sesion?');
   }
+
+  obtenerPerfil(id: number): void {
+    this.perfilService.obtenerPerfil(id).subscribe(
+        (data: Usuario) => {
+          this.perfil = data;
+        },
+        error => {
+          console.log('Error al obtener el perfil:', error);
+          // Manejar el error apropiadamente en tu interfaz de usuario
+        }
+      );
+  }
+
 }

@@ -1,33 +1,14 @@
 <div class="container">
-  <h1>Mas Populares</h1>
+  <h1>Libros Publicados</h1>
   <div class="carrusel1">
     <div class="flecha izquierda" (click)="moverCarrusel(-1)">
       <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
     </div>
     <div routerLink="/principal/detalleLibro" class="librosPopulares" #carruselContainer>
-      <div class="cardLibro" *ngFor="let libro of libros; let i = index">
-        <img class="imgLibro" src="{{ libro.imagen }}" alt="Imagen Libro">
+      <div class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
+        <img class="imgLibro" src="{{ libro.foto }}" alt="Imagen Libro">
         <div class="infoLibro">
-          <h3>{{ libro.titulo }}</h3>
-          <h4>{{ libro.autor }}</h4>
-        </div>
-      </div>
-    </div>
-    <div class="flecha derecha" (click)="moverCarrusel(1)">
-      <img src="./assets/img/FlechaDer.svg" alt="Flecha Derecha">
-    </div>
-  </div>
-  <h1>Novedades</h1>
-
-  <div class="carrusel1">
-    <div class="flecha izquierda" (click)="moverCarrusel(-1)">
-      <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
-    </div>
-    <div class="librosPopulares" #carruselContainer>
-      <div class="cardLibro" *ngFor="let libro of libros; let i = index">
-        <img class="imgLibro" src="{{ libro.imagen }}" alt="Imagen Libro">
-        <div class="infoLibro">
-          <h3>{{ libro.titulo }}</h3>
+          <h3>{{ libro.nombre }}</h3>
           <h4>{{ libro.autor }}</h4>
         </div>
       </div>

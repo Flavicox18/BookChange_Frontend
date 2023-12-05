@@ -8,7 +8,7 @@ import { Registrarse} from "../models/usuario";
 })
 export class AuthenticationService {
 
-  private baseUrl = 'http://localhost:8081/api/usuarios';
+  private baseUrl = 'http://localhost:8080/api/usuarios';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,6 +19,10 @@ export class AuthenticationService {
   iniciarSesion(correo: string, contrasena: string): Observable<any> {
     const requestBody = { correo, contrasena };
     return this.httpClient.post<any>(`${this.baseUrl}/iniciar-sesion`, requestBody);
+  }
+
+  verPerfil(idUsuario: number): Observable<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}/{idUsuario}`);
   }
 
 }

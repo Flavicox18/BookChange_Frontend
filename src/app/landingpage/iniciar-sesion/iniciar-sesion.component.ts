@@ -31,7 +31,7 @@ export class IniciarSesionComponent {
           .subscribe(
             (response) => {
               // Manejar la respuesta exitosa, por ejemplo, redirigir a otra página.
-              console.log('Sesión iniciada:', response);
+              console.log('inicio bien hecho:', response);
               this.router.navigate(['/principal']);
             },
             (error) => {
