@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SolicitudIntercambioComponent } from './solicitud-intercambio.component';
+import { ChatIntercambioComponent } from './chat-intercambio.component';
 
-describe('SolicitudIntercambioComponent', () => {
-  let component: SolicitudIntercambioComponent;
-  let fixture: ComponentFixture<SolicitudIntercambioComponent>;
+describe('ChatIntercambioComponent', () => {
+  let component: ChatIntercambioComponent;
+  let fixture: ComponentFixture<ChatIntercambioComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SolicitudIntercambioComponent]
+      declarations: [ChatIntercambioComponent]
     });
-    fixture = TestBed.createComponent(SolicitudIntercambioComponent);
+    fixture = TestBed.createComponent(ChatIntercambioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -19,3 +19,4 @@ describe('SolicitudIntercambioComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

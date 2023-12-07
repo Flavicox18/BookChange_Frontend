@@ -3,64 +3,77 @@
 
   <div class="ola">
     <div class="columna-izquierda">
-      <h1>Libro Ofrecido</h1>
-      <div class="imagen-libro">
-        <img src="./assets/img/Libro2.webp" alt="Libro">
-      </div>
-      <h1>Harry Potter y la Piedra Filosofal</h1>
-        <button class="button">CAMBIAR LIBRO</button>
-    </div>
-
-    <div class="columna-medio">
-
-      <div class="fila1">
-        <h2>Estás ofreciendo el libro CAPITÁN CALZONCILLO por el libro CIEN AÑOS DE SOLEDAD</h2>
-        <img src="./assets/img/flechas.png" alt="img">
-      </div>
-
-      <div class="campos">
-        <form  [formGroup]="formulario">
-          <div class="campo1">
-            <div>
-              <label for="fechaInicio">Fecha inicio:</label>
-              <input type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" required>
-            </div>
-              <div>
-                <label for="fechaFin">Fecha fin:</label>
-                <input type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" required>
-              </div>
-          </div>
-
-          <div class="campo2">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" formControlName="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
-          </div>
-        </form>
-      </div>
-
-    </div>
-
-    <div class="columna-derecha">
-      <h1>Libro Solicitado</h1>
-      <div class="imagen-libro">
-        <img src="./assets/img/librito.png" alt="Libro">
-      </div>
-
-      <div class="fila2">
-        <h1>Dueño</h1>
-      </div>
 
       <div class="fila2">
         <div class="circle"><img src="./assets/img/imgM.jpg" alt="img-circulo"></div>
         <h3>Laura Patricia</h3>
       </div>
+
+      <div class="fila2">
+        <div class="circle"><img src="./assets/img/Ha.jpg" alt="img-circulo"></div>
+        <h3>Juan David</h3>
+      </div>
+
+      <div class="fila2">
+        <div class="circle"><img src="./assets/img/Hb.jpg" alt="img-circulo"></div>
+        <h3>Samuel de luque</h3>
+      </div>
+
+      <div class="fila2">
+        <h3>No tienes más chats </h3>
+      </div>
     </div>
 
-  </div>
+    <div class="columna-medio">
 
-  <div class="btn">
-    <button routerLink="/principal/detalleLibro" class="button1"  (click)="cancelar()">CANCELAR</button>
-    <button routerLink="/principal/chatIntercambio" class="buttonend"  (click)="guardar()">SOLICITAR INTERCAMBIO</button>
+      <div class="chat_window">
+        <div class="top_menu">
+          <img class="circle" src="./assets/img/imgM.jpg" alt="img-circulo">
+          <h1>Laura Patricia</h1>
+        </div>
+        <ul class="messages">
+          <li class="message right" *ngFor="let item of messageList"
+              [ngClass]="{'left': item.message_side === 'receiver', 'right': item.message_side === 'sender'}"
+          >
+            <div class="avatar"></div>
+            <div class="text_wrapper">
+              <div class="text">{{item.message}}</div>
+            </div>
+          </li>
+        </ul>
+        <div class="bottom">
+          <div class="mensaje">
+            <input placeholder="Message..." [(ngModel)]="messageInput" (keyup.enter)="sendMessage()"/>
+          </div>
+          <div class="enviar" (click)="sendMessage()">
+            <div class="text">Enviar</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columna-derecha">
+      <h2>Libro Interesado</h2>
+      <div class="imagen-libro">
+        <img src="./assets/img/librito.png" alt="Libro">
+      </div>
+
+      <div class="flechas">
+        <img src="./assets/img/flechas.png" alt="flechas">
+      </div>
+
+      <div class="imagen-libro">
+        <img src="./assets/img/Libro2.webp" alt="Libro">
+        <h2>Mi libro</h2>
+
+        <button class="button">Aceptar Solicitud</button>
+        <button class="button1">Rechazar Solicitud</button>
+
+      </div>
+
+    </div>
+
   </div>
 
 </div>
