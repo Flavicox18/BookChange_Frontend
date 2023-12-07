@@ -1,9 +1,6 @@
 <div class="container">
   <h1>Libros Publicados</h1>
   <div class="carrusel1">
-    <div class="flecha izquierda" (click)="moverCarrusel(-1)">
-      <img src="./assets/img/FlechaIzq.svg" alt="Flecha Izquierda">
-    </div>
     <div routerLink="/principal/detalleLibro" class="librosPopulares" #carruselContainer>
       <div class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
         <img class="imgLibro" src="{{ libro.foto }}" alt="Imagen Libro">
@@ -13,8 +10,6 @@
         </div>
       </div>
     </div>
-    <div class="flecha derecha" (click)="moverCarrusel(1)">
-      <img src="./assets/img/FlechaDer.svg" alt="Flecha Derecha">
-    </div>
+
   </div>
 </div>

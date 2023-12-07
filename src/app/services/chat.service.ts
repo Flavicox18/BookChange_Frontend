@@ -12,12 +12,12 @@ export class ChatService {
   private stompClient: any
   private messageSubject: BehaviorSubject<ChatMessage[]> = new BehaviorSubject<ChatMessage[]>([]);
 
-  constructor() { 
+  constructor() {
     this.initConnenctionSocket();
   }
 
   initConnenctionSocket() {
-    const url = '//localhost:3000/chat-socket';
+    const url = '//localhost:8081/chat-socket';
     const socket = new SockJS(url);
     this.stompClient = Stomp.over(socket)
   }

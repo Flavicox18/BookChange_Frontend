@@ -9,7 +9,7 @@ import {LibroLista} from "../models/LibroLista";
 })
 export class LibrosService {
 
-  private apiUrl = 'http://localhost:8080/api/libros'; // Reemplaza con la URL de tu backend
+  private apiUrl = 'http://localhost:8081/api/libros'; // Reemplaza con la URL de tu backend
 
   constructor(private http: HttpClient) { }
 
