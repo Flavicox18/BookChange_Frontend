@@ -22,30 +22,13 @@
         <form  [formGroup]="formulario">
           <div class="campo1">
             <div>
-              <label for="fecha">Fecha:</label>
-              <input type="date" id="fecha" name="fecha" formControlName="fecha" required>
+              <label for="fechaInicio">Fecha inicio:</label>
+              <input type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" required>
             </div>
-            <div class="subcampo">
               <div>
-                <label for="duracion">Duracion del intercambio:</label>
-                <input type="number" id="duracion" name="duracion" formControlName="duracion">
-                <div *ngIf="formulario.get('duracion')?.hasError('required')">
-                  La duración es obligatoria.
-                </div>
-                <div *ngIf="formulario.get('duracion')?.hasError('min') || formulario.get('duracion')?.hasError('max')">
-                  {{ obtenerMensajeErrorDuracion() }}
-                </div>
+                <label for="fechaFin">Fecha fin:</label>
+                <input type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" required>
               </div>
-
-              <div>
-                <label for="periodo">Periodo:</label>
-                <select id="periodo" name="periodo" formControlName="periodo">
-                  <option value="dias">Días</option>
-                  <option value="semanas">Semanas</option>
-                  <option value="meses">Meses</option>
-                </select>
-              </div>
-            </div>
           </div>
 
           <div class="campo2">

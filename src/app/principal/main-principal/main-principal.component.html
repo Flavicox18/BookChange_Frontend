@@ -1,15 +1,14 @@
 <div class="container">
   <h1>Libros Publicados</h1>
-  <div class="carrusel1">
-    <div routerLink="/principal/detalleLibro" class="librosPopulares" #carruselContainer>
-      <div class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
+  <div class="contendor">
+
+      <div routerLink="/principal/detalleLibro"  class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
         <img class="imgLibro" src="{{ libro.foto }}" alt="Imagen Libro">
         <div class="infoLibro">
           <h3>{{ libro.nombre }}</h3>
           <h4>{{ libro.autor }}</h4>
         </div>
       </div>
-    </div>
 
   </div>
 </div>

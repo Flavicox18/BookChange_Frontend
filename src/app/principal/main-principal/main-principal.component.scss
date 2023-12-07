@@ -11,38 +11,23 @@ h1 {
   margin-top: 10px;
 }
 
-.carrusel1 {
+.contendor {
   display: flex;
   flex-direction: row;
-  overflow: hidden; /* Oculta los elementos que están fuera del contenedor */
-}
-
-.flecha {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 10%;
-  cursor: pointer;
-}
-
-.librosPopulares {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease; /* Agrega transición suave al movimiento */
+  flex-wrap: wrap;
 }
 
 .cardLibro {
-  min-width: 18.51%;
-  min-height: 45%;
+  width: 225px;
+  height: 450px;
   padding: 8px;
   display: flex;
   flex-direction: column;
 }
 
 .imgLibro {
-  height: 80%;
-  width: 100%;
+  height: 360px;
+  width: 225px;
   padding: 2px;
   background-color: #d1d1d1;
   border: 2px solid #000000;
