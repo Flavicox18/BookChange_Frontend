@@ -27,4 +27,10 @@ export class LibrosService {
     const url = `${this.apiUrl}/disponibles`;
     return this.http.get<LibroLista[]>(url);
   }
+
+  detallesLibro(libroId: number): Observable<LibroLista> {
+    const url = `${this.apiUrl}/detalles/${libroId}`;
+    return this.http.get<LibroLista>(url);
+  }
+
 }

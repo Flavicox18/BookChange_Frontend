@@ -2,7 +2,7 @@
   <h1>Libros Publicados</h1>
   <div class="contendor">
 
-      <div routerLink="/principal/detalleLibro"  class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
+      <div [routerLink]="['/principal/detalleLibro', libro.idLibro]" class="cardLibro" *ngFor="let libro of librosDisponibles; let i = index">
         <img class="imgLibro" src="{{ libro.foto }}" alt="Imagen Libro">
         <div class="infoLibro">
           <h3>{{ libro.nombre }}</h3>

@@ -3,14 +3,13 @@
   <div class="ola">
     <div class="columna-izquierda">
       <div class="imagen-libro">
-        <img src="./assets/img/librito.png" alt="Libro">
+        <img src="{{ libro?.foto }}" alt="Libro" height="auto" width="100%">
       </div>
 
       <div class="detalles-libro">
-        <h3>Editorial: De Bolsillo</h3>
-        <h3>Idioma: Español</h3>
-        <h3>Fecha de Lanzamiento: Mayo, 1967</h3>
-        <h3>Géneros: Novela, Ficción, Fantasía</h3>
+        <h3>Editorial: {{ libro?.editorial }}</h3>
+        <h3>Fecha de Lanzamiento: {{ libro?.fechaLanzamiento | date:'mediumDate' }}</h3>
+        <h3>Géneros: {{ libro?.genero }}</h3>
       </div>
 
     </div>
@@ -18,10 +17,10 @@
     <div class="columna-derecha">
 
       <div class="fila1">
-        <h1>CIEN AÑOS DE SOLEDAD</h1>
-        <h2>Gabriel García Márquez</h2>
+        <h1>{{ libro?.nombre }}</h1>
+        <h2>{{ libro?.autor }}</h2>
         <h3>Sinopsis</h3>
-        <h3>Entre la boda de José Arcadio Buendía con Amelia Iguarán hasta la maldición de Aureliano Babilonia transcurre todo un siglo. Cien años de soledad para una estirpe única, fantástica, capaz de fundar una ciudad tan especial como Macondo y de engendrar niños con cola de cerdo</h3>
+        <h3>{{ libro?.sinopsis }} ...</h3>
       </div>
 
       <div class="fila2">

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class IntercambioService {
 
-  private apiUrl = 'http://localhost:8080/api/intercambios';
+  private apiUrl = 'http://localhost:8081/api/intercambios';
 
   constructor(private http: HttpClient) { }
 

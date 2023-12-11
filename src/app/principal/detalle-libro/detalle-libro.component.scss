@@ -24,11 +24,12 @@
     flex-direction: column;
 
     .imagen-libro {
-      width: auto; /* Ajusta el tamaño según tus necesidades */
-      height: auto; /* Ajusta el tamaño según tus necesidades */
+      width: 100px; /* Ajusta el tamaño según tus necesidades */
+      height: 300px; /* Ajusta el tamaño según tus necesidades */
       background-color: #ccc; /* Color de fondo del cuadrado de la imagen */
       margin-bottom: 15px;
       overflow: hidden;
+
 
       img {
         width: 100%;
