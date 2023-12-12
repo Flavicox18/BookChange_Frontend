@@ -14,6 +14,8 @@ export class SolicitudIntercambioComponent {
     fechaFin: [null, [Validators.required]],
     mensaje: [null, [Validators.required, Validators.maxLength(255)]],
   });
+  messageInput: any;
+  messageList: any;
 
   constructor(private fb: FormBuilder, private intercambioService: IntercambioService) {
     this.formulario.get('periodo')?.valueChanges.subscribe(periodo => {
@@ -83,5 +85,9 @@ export class SolicitudIntercambioComponent {
         // Puedes agregar lógica adicional aquí si es necesario
       }
     );
+  }
+
+  sendMessage() {
+
   }
 }

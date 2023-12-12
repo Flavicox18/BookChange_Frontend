@@ -22,7 +22,7 @@ export class VerPerfilComponent implements OnInit{
 
   ngOnInit(): void {
     const idUsuarioParam = this.route.snapshot.paramMap.get('id');
-    const idUsuario = idUsuarioParam ? +idUsuarioParam : 4;
+    const idUsuario = idUsuarioParam ? +idUsuarioParam : 1;
     console.log('ID de usuario:', idUsuario); // Verifica si este log muestra el valor esperado
 
     this.obtenerPerfil(idUsuario);
