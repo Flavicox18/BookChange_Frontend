@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService} from "../../services/authentication.service";
-import { Usuario} from "../../models/usuario";
+import { Registrarse} from "../../models/usuario";
 import { FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 
@@ -31,7 +31,7 @@ export class RegistrarseComponent implements OnInit{
     this.generoSeleccionado = !this.generoSeleccionado;
   }
 
-  registrarseModel: Usuario = new Usuario();
+  registrarseModel: Registrarse = new Registrarse();
 
   constructor(private fb: FormBuilder, private authenticationService: AuthenticationService) {
     this.datosForm = this.fb.group({});

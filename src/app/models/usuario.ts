@@ -1,4 +1,5 @@
-export class Usuario{
+export class Registrarse{
+
   dni: number
   nombre: string
   apellido: string

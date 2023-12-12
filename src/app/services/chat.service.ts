@@ -17,7 +17,7 @@ export class ChatService {
   }
 
   initConnenctionSocket() {
-    const url = '//localhost:8080/chat-socket';
+    const url = '//localhost:8081/chat-socket';
     const socket = new SockJS(url);
     this.stompClient = Stomp.over(socket)
   }
